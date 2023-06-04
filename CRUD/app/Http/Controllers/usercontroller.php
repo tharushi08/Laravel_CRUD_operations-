@@ -22,4 +22,18 @@ class usercontroller extends Controller
         $students->save();
         return redirect('crud');  
     }
+
+    function delete($ID)
+    {
+        $data = student::find($ID);
+        $data->delete();
+        return redirect('crud');
+    }
+
+    function showdata($ID)
+    {
+        $data = student::find($ID);
+        return view ('update',['data'=>$data]);
+    }
+
 }

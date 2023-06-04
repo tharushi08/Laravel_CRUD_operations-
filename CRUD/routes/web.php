@@ -21,3 +21,6 @@ Route::get('/', function () {
 Route::view('crud','main');
 Route::get('crud',[userController::class,'show']);
 Route::post('crud',[userController::class,'AddData']);
+Route::get('delete/{ID}',[userController::class,'delete']);   
+Route::post('update/{ID}',[userController::class,'showdata']);
+Route::get('update',[userController::class,'update']);

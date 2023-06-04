@@ -7,6 +7,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/693b644b16.js" crossorigin="anonymous"></script>
 
     <title>CRUD</title>
   </head>
@@ -73,7 +74,18 @@ aria-labelledby="exampleModalLabel" aria-hidden="ture">
       <td>{{$member['Name']}}</td>
       <td>{{$member['Password']}}</td>
       <td>{{$member['Date']}}</td>
-      <td></td>
+      <td>
+        <a href={{"update/".$member['id']}} class="text-white btn btn-success ml-2 pt-2">
+            <i class="fa-sharp fa-solid fa-pen-to-square"></i>
+
+            <a href={{"delete/".$member['id']}} class="text-white btn btn-danger ml-2 pt-2">
+            <i class="fa fa-trash"></i>
+
+            <a href={{"report/".$member['id']}} class="text-white btn btn-warning ml-2 pt-2">
+            <i class="fa fa-eye"></i>
+
+    </a>
+      </td>
     </tr>
     @endforeach
   </tbody>
